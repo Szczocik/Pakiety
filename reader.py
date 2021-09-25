@@ -20,19 +20,16 @@ print(changes)
 file = open('data.csv', 'r')
 for line in file.readlines():
         splitted_line = line.split(';')
-        line_1 = splitted_line[2:]
-        line_2 = splitted_line[3:]
-        line_3 = splitted_line[4:]
-        data = [
-            [int(line_1)],
-            [int(line_2)],
-            [line_3]
-        ]
+        position_1 = splitted_line[2:]
+        position_2 = splitted_line[3:]
+        position_3 = splitted_line[4:]
+        data = [position_1, position_2, position_3]
+
 
 file.close()
 
-file = open('baza_danych.txt', 'w')
-        file.write('saldo:' + str(saldo) + '\n')
-        for product_name, data in store.items():
-            file.write(str(product_name) + ';' + str(data['count']) + ';' + str(data['price']) + '\n')
-        file.close()
+# file = open('baza_danych.txt', 'w')
+#         file.write('saldo:' + str(saldo) + '\n')
+#         for product_name, data in store.items():
+#             file.write(str(product_name) + ';' + str(data['count']) + ';' + str(data['price']) + '\n')
+#         file.close()
