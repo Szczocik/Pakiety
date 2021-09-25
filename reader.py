@@ -24,8 +24,8 @@ for line in file.readlines():
         line_2 = splitted_line[3:]
         line_3 = splitted_line[4:]
         data = [
-            [line_1],
-            [line_2],
+            [int(line_1)],
+            [int(line_2)],
             [line_3]
         ]
 
