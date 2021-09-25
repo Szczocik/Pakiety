@@ -20,9 +20,11 @@ print(changes)
 file = open('data.csv', 'r')
 for line in file.readlines():
         splitted_line = line.split(';')
-        product_name = splitted_line[0]
-        product_count = splitted_line[1]
-        product_price = splitted_line[2]
-        data = []
+        line_1 = splitted_line[2:]
+        line_2 = splitted_line[3:]
+        product_price = splitted_line[4:]
+        data = [
+            [first_line = ]
+        ]
 
 file.close()
