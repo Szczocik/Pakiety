@@ -22,11 +22,11 @@ for line in file.readlines():
         splitted_line = line.split(';')
         line_1 = splitted_line[2:]
         line_2 = splitted_line[3:]
-        lin_3 = splitted_line[4:]
+        line_3 = splitted_line[4:]
         data = [
             [line_1],
             [line_2],
-
+            [line_3]
         ]
 
 file.close()
