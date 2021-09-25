@@ -22,7 +22,7 @@ for line in file.readlines():
         splitted_line = line.split(';')
         line_1 = splitted_line[2:]
         line_2 = splitted_line[3:]
-        product_price = splitted_line[4:]
+        lin_3 = splitted_line[4:]
         data = [
             [first_line = ]
         ]
