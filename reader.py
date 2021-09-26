@@ -38,3 +38,9 @@ file = open('baza_danych.txt', 'w')
         for product_name, data in store.items():
             file.write(str(product_name) + ';' + str(data['count']) + ';' + str(data['price']) + '\n')
         file.close()
+
+file = open('baza_danych.txt', 'w')
+        file.write('saldo:' + str(saldo) + '\n')
+        for product_name, data in store.items():
+            file.write(str(product_name) + ';' + str(data['count']) + ';' + str(data['price']) + '\n')
+        file.close()
