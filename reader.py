@@ -9,24 +9,23 @@ data = [
 ]
 
 params = sys.argv[1:]
-print(params)
+# print(params)
 input_filename = params[0]
-output_filename = params[1]
-changes = params[2:]
-print(input_filename)
-print(output_filename)
-print(changes)
+# output_filename = params[1]
+# changes = params[2:]
+# print(input_filename)
+# print(output_filename)
+# print(changes)
 
-file = open('data.csv', 'r')
-for line in file.readlines():
-        splitted_line = line.split(';')
-        position_1 = splitted_line[2:]
-        position_2 = splitted_line[3:]
-        position_3 = splitted_line[4:]
-        data = [position_1, position_2, position_3]
+with open('data.csv', 'r') as file:
+    for line in file:
+        print(line)
+    #     splitted_line = line.split(';')
+    #     position_1 = splitted_line[0]
+    #     position_2 = splitted_line[1]
+    #     position_3 = splitted_line[2]
+    #     data = [position_1, position_2, position_3]
 
-
-file.close()
 
 # file = open('baza_danych.txt', 'w')
 #         file.write('saldo:' + str(saldo) + '\n')
