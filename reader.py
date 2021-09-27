@@ -26,16 +26,13 @@ with open(f'{input_filename}', 'r') as file:
         data_output.append(data)
         print(data)
 
+os.mkdir(f'{output_filename}')
 
-    print(data_output)
 
 with open(f'{input_filename}', 'w') as output_filename:
-    output_filename.write()
+    data_output.write(f'{position_1}' + ';' + f'{position_2}' + ';' + f'{position_3}')
+    print(data_output)
 
-file = open('baza_danych.txt', 'w')
-        file.write('saldo:' + str(saldo) + '\n')
-        for product_name, data in store.items():
-            file.write(str(product_name) + ';' + str(data['count']) + ';' + str(data['price']) + '\n')
-        file.close()
+
 
 
