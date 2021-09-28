@@ -8,7 +8,7 @@ params = sys.argv[1:]
 
 input_filename = params[0]
 output_filename = params[1]
-# changes = params[2:]
+changes = params[2:]
 # print(input_filename)
 # print(output_filename)
 # print(changes)
@@ -26,12 +26,22 @@ with open(f'{input_filename}', 'r') as file:
         data_output.append(data)
         print(data)
 
-os.mkdir(f'{output_filename}')
+    for change in changes:
+        splitted_change = change.split(',')
+        y = splitted_change[0]
+        x = splitted_change[1]
+        value = splitted_change[2]
+        print(y, x, value)
 
 
-with open(f'{input_filename}', 'w') as output_filename:
-    data_output.write(f'{position_1}' + ';' + f'{position_2}' + ';' + f'{position_3}')
-    print(data_output)
+
+
+# os.mkdir(f'{output_filename}')
+
+
+# with open(f'{input_filename}', 'w') as output_filename:
+#     data_output.write(f'{position_1}' + ';' + f'{position_2}' + ';' + f'{position_3}')
+#     print(data_output)
 
 
 
