@@ -19,28 +19,23 @@ with open(f'{input_filename}', 'r') as file:
         position_1 = splitted_line[0]
         position_2 = splitted_line[1]
         position_3 = splitted_line[2]
-        data = [position_1, position_2, position_3]
+        data = [position_1, position_2, position_3.replace('\n', '')]
 
         data_output.append(data)
     print(data_output)
 
     for change in changes:
         splitted_change = change.split(',')
-        y = splitted_change[0]
-        x = splitted_change[1]
+        y = int(splitted_change[0])
+        x = int(splitted_change[1])
         value = splitted_change[2]
+        data_output[x][y] = value
     print(y, x, value)
 
-
-
-
-
-
-os.mkdir(f'{output_filename}')
-name = f'{output_filename}'
-with open(f'{data_output}', 'w') as output_filename:
-    output_filename.write(f'{position_1}' + ';' + f'{position_2}' + ';' + f'{position_3}' + '\n')
-    print(data_output)
+with open(f'{output_filename}', 'w') as output_filename:
+    for line in data_output:
+        output_filename.write(f'{line[0]}' + ';' + f'{line[1]}' + ';' + f'{line[2]}' + '\n')
+        print(line)
 
 
 
