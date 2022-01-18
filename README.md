@@ -1,4 +1,4 @@
-# Pakiety
+## Pakiety
 
 Napisz program "reader.py", który zmodyfikuje plik csv i wyświetli w terminalu jego zawartość, a następnie zapisze w wybranej lokalizacji.
 
